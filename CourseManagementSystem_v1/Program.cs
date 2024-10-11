@@ -10,17 +10,13 @@ namespace CourseManagementSystem_v1
     {
         static void Main(string[] args)
         {
-            var _courseManager = new CourseManager();
-            var course1 = new Course();
-            course1.SetCourseId("C_001");
-            course1.SetTitle("python for beginers");
-            course1.SetDuration("3 months");
-            course1.SetPrice(10);
-
+            var course1 = new Course("C_001", "python for beginers", "3 months", 10);
+   
             Console.WriteLine($"ID:{course1.GetCourseId()} ,Title: {course1.GetTitle()} , Duration: {course1.GetDuration()}, Price: {course1.GetPrice()}");
             
             Console.ReadKey();
 
+            var _courseManager = new CourseManager();
 
             bool exit = true;
             while (exit)
