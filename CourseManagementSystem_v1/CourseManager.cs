@@ -34,5 +34,22 @@ namespace CourseManagementSystem_v1
                 Console.WriteLine("Course Not Available..");
             }
         }
+
+        public void UpdateCourse(string id , string title, string duration, decimal price)
+        {
+            var course = courses.SingleOrDefault(s => s.GetCourseId() == id);
+            if(course != null)
+            {
+                course.SetTitle(title);
+                course.SetDuration(duration);
+                course.SetPrice(price);
+
+                Console.WriteLine("Course updated successfully.");
+            }
+            else
+            {
+                Console.WriteLine("Course Not Found..");
+            }
+        }
     }
 }
