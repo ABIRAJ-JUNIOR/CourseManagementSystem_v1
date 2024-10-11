@@ -19,6 +19,9 @@ namespace CourseManagementSystem_v1
         }
 
 
-        
+        public string DisplayDigitalCourseInfo()
+        {
+            return base.ToString() + $"CourseLink: {CourseLink} , FileSize: {FileSize}";
+        }
     }
 }
