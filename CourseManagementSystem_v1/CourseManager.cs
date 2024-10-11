@@ -51,5 +51,19 @@ namespace CourseManagementSystem_v1
                 Console.WriteLine("Course Not Found..");
             }
         }
+
+        public void DeleteCourse(string id)
+        {
+            var course = courses.SingleOrDefault(s => s.GetCourseId() == id);
+            if (course != null)
+            {
+                courses.Remove(course);
+                Console.WriteLine("Course deleted successfully.");
+            }
+            else
+            {
+                Console.WriteLine("Course Not Found..");
+            }
+        }
     }
 }
