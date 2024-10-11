@@ -42,8 +42,7 @@ namespace CourseManagementSystem_v1
                         string title = Console.ReadLine();
                         Console.Write("Enter Course Duration: ");
                         string duration = Console.ReadLine();
-                        Console.Write("Enter Course price: ");
-                        decimal price = decimal.Parse(Console.ReadLine());
+                        decimal price = _courseManager.ValidateCoursePrice();
 
                         _courseManager.CreateCourse(id, title, duration, price);
 
@@ -61,8 +60,7 @@ namespace CourseManagementSystem_v1
                         string newtitle = Console.ReadLine();
                         Console.Write("Enter Course Duration: ");
                         string newduration = Console.ReadLine();
-                        Console.Write("Enter Course price: ");
-                        decimal newprice = decimal.Parse(Console.ReadLine());
+                        decimal newprice = _courseManager.ValidateCoursePrice();
 
                         _courseManager.UpdateCourse(Courseid, newtitle, newduration, newprice);
                         break;
