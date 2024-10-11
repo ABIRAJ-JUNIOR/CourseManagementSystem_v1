@@ -27,11 +27,41 @@ namespace CourseManagementSystem_v1
                 Console.Clear();
                 Console.WriteLine("--- Course Management System ---");
                 Console.WriteLine("1. Add a Course");
-                Console.WriteLine("2. View");
-                Console.WriteLine("3. Add a Course");
-                Console.WriteLine("4. Add a Course");
-                Console.WriteLine("5. Add a Course");
-                Console.WriteLine("6. Add a Course");
+                Console.WriteLine("2. View All Courses");
+                Console.WriteLine("3. Update a Courses");
+                Console.WriteLine("4. Delete a Course");
+                Console.WriteLine("5. Exit");
+                Console.Write("\nChoose an Option : ");
+                string option = Console.ReadLine();
+
+                switch(option)
+                {
+                    case "1":
+                        Console.Clear();
+                        break;
+                    case "2":
+                        Console.Clear();
+                        break;
+                    case "3":
+                        Console.Clear();
+                        break;
+                    case "4":
+                        Console.Clear();
+                        break;
+                    case "5":
+                        exit = false;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid Option");
+                        break;
+                }
+
+                if(option != "5")
+                {
+                    Console.WriteLine("Press any Key to Continue..");
+                    Console.ReadKey();
+                }
+
             }
         }
     }
