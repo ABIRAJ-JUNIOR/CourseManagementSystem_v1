@@ -11,9 +11,9 @@ namespace CourseManagementSystem_v1
         public string Schedule { get; set; }
         public int ClassroomCapacity { get; set; }
 
-        public string DisplayOnPremisCourseInfo()
+        public override string DisplayCourseInfo()
         {
-            return base.ToString() + $"Schedule: {Schedule} , ClassroomCapacity: {ClassroomCapacity}";
+            return base.DisplayCourseInfo() + $"Schedule: {Schedule} , ClassroomCapacity: {ClassroomCapacity}";
         }
     }
 }
