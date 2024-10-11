@@ -10,15 +10,16 @@ namespace CourseManagementSystem_v1
     {
         static void Main(string[] args)
         {
-            //var course = new Course();
-            //course.SetCourseId("C_001");
-            //course.SetTitle("python for beginers");
-            //course.SetDuration("3 months");
-            //course.SetPrice(10);
+            var _courseManager = new CourseManager();
+            var course1 = new Course();
+            course1.SetCourseId("C_001");
+            course1.SetTitle("python for beginers");
+            course1.SetDuration("3 months");
+            course1.SetPrice(10);
 
-            //course.GetCourseId();
-            //course.ToString();
-            //Console.ReadKey();
+            Console.WriteLine($"ID:{course1.GetCourseId()} ,Title: {course1.GetTitle()} , Duration: {course1.GetDuration()}, Price: {course1.GetPrice()}");
+            
+            Console.ReadKey();
 
 
             bool exit = true;
@@ -38,15 +39,42 @@ namespace CourseManagementSystem_v1
                 {
                     case "1":
                         Console.Clear();
+                        Console.WriteLine("-- Add a Course --\n");
+                        Console.Write("Enter Course ID: ");
+                        string id = Console.ReadLine();
+                        Console.Write("Enter Course Title: ");
+                        string title = Console.ReadLine();
+                        Console.Write("Enter Course Duration: ");
+                        string duration = Console.ReadLine();
+                        Console.Write("Enter Course price: ");
+                        decimal price = decimal.Parse(Console.ReadLine());
+
+                        _courseManager.CreateCourse(id, title, duration, price);
+
                         break;
                     case "2":
                         Console.Clear();
+                        _courseManager.ReadCourses();
                         break;
                     case "3":
                         Console.Clear();
+                        Console.Write("Enter Course ID: ");
+                        string Courseid = Console.ReadLine();
+                        Console.Write("Enter Course Title: ");
+                        string newtitle = Console.ReadLine();
+                        Console.Write("Enter Course Duration: ");
+                        string newduration = Console.ReadLine();
+                        Console.Write("Enter Course price: ");
+                        decimal newprice = decimal.Parse(Console.ReadLine());
+
+                        _courseManager.UpdateCourse(Courseid, newtitle, newduration, newprice);
                         break;
                     case "4":
                         Console.Clear();
+                        Console.Write("Enter Course ID: ");
+                        string DeleteCourseid = Console.ReadLine();
+
+                        _courseManager.DeleteCourse(DeleteCourseid);
                         break;
                     case "5":
                         exit = false;
