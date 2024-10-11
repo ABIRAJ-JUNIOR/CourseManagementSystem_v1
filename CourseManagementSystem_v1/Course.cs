@@ -68,7 +68,7 @@ namespace CourseManagementSystem_v1
 
         public override string ToString()
         {
-            return $"ID: {this.GetCourseId()}, Title: {this.GetTitle()}, Duration: {this.GetDuration()}, Price: {this.GetPrice()}";
+            return $"ID: {CourseId}, Title: {Title}, Duration: {Duration}, Price: {Price}";
         }
     }
 }

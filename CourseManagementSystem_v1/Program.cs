@@ -58,6 +58,7 @@ namespace CourseManagementSystem_v1
                         break;
                     case "3":
                         Console.Clear();
+                        Console.WriteLine("-- Update a Course --\n");
                         Console.Write("Enter Course ID: ");
                         string Courseid = Console.ReadLine();
                         Console.Write("Enter Course Title: ");
@@ -71,6 +72,7 @@ namespace CourseManagementSystem_v1
                         break;
                     case "4":
                         Console.Clear();
+                        Console.WriteLine("-- Delete a Course --\n");
                         Console.Write("Enter Course ID: ");
                         string DeleteCourseid = Console.ReadLine();
 
@@ -86,7 +88,7 @@ namespace CourseManagementSystem_v1
 
                 if(option != "5")
                 {
-                    Console.WriteLine("Press any Key to Continue..");
+                    Console.WriteLine("\nPress any Key to Continue..");
                     Console.ReadKey();
                 }
 
